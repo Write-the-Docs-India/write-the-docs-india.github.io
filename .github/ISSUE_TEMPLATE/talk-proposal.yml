@@ -1,5 +1,5 @@
 name: Talk proposal
-description: Pitch a lightning talk or a full talk for a Write the Docs India meetup.
+description: Pitch a lightning talk or a longer talk for a Write the Docs India meetup.
 title: "Talk: "
 labels: ["talk proposal"]
 body:
@@ -18,8 +18,8 @@ body:
     attributes:
       label: Format
       options:
-        - Lightning talk (about 10 minutes)
-        - Full talk (about 20 minutes)
+        - Lightning talk
+        - Longer talk
         - Not sure yet
     validations:
       required: true
