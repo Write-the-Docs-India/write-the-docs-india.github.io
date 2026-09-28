@@ -1,0 +1,26 @@
+---
+layout: default
+title: Debriefs
+description: Notes and recordings from Write the Docs India events.
+---
+<section class="wtdi-sec wtdi-sec--first">
+  <div class="wtdi-page wtdi-sec__body">
+    <h1>Debriefs</h1>
+    <p>Notes from each event: who spoke, what they covered, and links to recordings.</p>
+    {%- if site.posts.size > 0 %}
+    <ol class="wtdi-past">
+      {%- for post in site.posts %}
+      <li>
+        <time class="wtdi-meta" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <div>
+          <a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a>
+          {%- if post.description %}<br><span class="wtdi-muted">{{ post.description }}</span>{% endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- else %}
+    <p class="wtdi-note">No debriefs yet.</p>
+    {%- endif %}
+  </div>
+</section>
