@@ -2,7 +2,7 @@ title: Write the Docs India
 description: >-
   The India chapter of Write the Docs, for people who write and look after
   documentation.
-url: https://writethedocs-india.github.io
+url: https://write-the-docs-india.github.io
 baseurl: ""
 lang: en-IN
 timezone: Asia/Kolkata
@@ -12,7 +12,7 @@ social:
   name: Write the Docs India
   links:
     - https://www.linkedin.com/company/write-the-docs-india
-    - https://github.com/writethedocs-india
+    - https://github.com/Write-the-Docs-India
 
 # Community links, used across the site
 links:
@@ -21,9 +21,9 @@ links:
   meetup: https://www.meetup.com/write-the-docs-india/
   slack_invite: https://www.writethedocs.org/slack/
   slack_channel: "#india"
-  github: https://github.com/writethedocs-india
-  repo: https://github.com/writethedocs-india/writethedocs-india.github.io
-  talk_proposal: https://github.com/writethedocs-india/writethedocs-india.github.io/issues/new?template=talk-proposal.yml
+  github: https://github.com/Write-the-Docs-India
+  repo: https://github.com/Write-the-Docs-India/writethedocs-india.github.io
+  talk_proposal: https://github.com/Write-the-Docs-India/writethedocs-india.github.io/issues/new?template=talk-proposal.yml
   coc: https://www.writethedocs.org/code-of-conduct/
   coc_meetups: https://www.writethedocs.org/code-of-conduct-shortform-meetups/
   coc_email: conduct@writethedocs.org
