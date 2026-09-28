@@ -1,5 +1,5 @@
 /* Write the Docs India
-   The page is laid out like a document: a running head, a left margin that
+   The page is laid out like a document: a left margin that
    holds section numbers and dates, ruled sections, and revision marks.
    Colors come from the logo SVG. Saffron is 2.9:1 on white, so it is only
    used for rules and marks, never for text. */
@@ -145,7 +145,7 @@ code {
   border-bottom-width: 6px;
 }
 
-/* Running head */
+/* Skip link */
 
 .wtdi-skip {
   position: absolute;
@@ -158,41 +158,6 @@ code {
   z-index: 10;
   background: var(--wtdi-paper);
   padding: 0.5rem 0.75rem;
-}
-
-.wtdi-runhead__inner {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.25rem 1.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  font-size: 0.95rem;
-}
-
-.wtdi-runhead__title {
-  font-family: var(--wtdi-serif);
-  font-weight: 700;
-  color: var(--wtdi-ink);
-  text-decoration: none;
-}
-
-.wtdi-runhead nav {
-  display: flex;
-  gap: 1rem;
-  margin-left: auto;
-}
-
-.wtdi-runhead nav a {
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.wtdi-runhead nav a:hover,
-.wtdi-runhead nav a[aria-current="page"] {
-  text-decoration: underline;
-  text-decoration-color: var(--wtdi-saffron);
-  text-decoration-thickness: 2px;
 }
 
 /* Title block: the logo works as a drop cap, with the intro wrapping around it */
@@ -311,6 +276,18 @@ code {
   color: var(--wtdi-navy);
 }
 
+.wtdi-toc__more {
+  margin: 1rem 0 0;
+  font-size: 0.95rem;
+}
+
+.wtdi-toc__more a {
+  display: inline;
+  padding: 0;
+  color: var(--wtdi-navy);
+  text-decoration: underline;
+}
+
 /* Actions */
 
 .wtdi-actions {
@@ -359,6 +336,16 @@ h2 .wtdi-scribble {
   background: var(--wtdi-navy-dark);
   border-color: var(--wtdi-navy-dark);
   text-decoration: none;
+}
+
+.wtdi-button--quiet {
+  background: transparent;
+  color: var(--wtdi-navy);
+}
+
+.wtdi-button--quiet:hover {
+  background: var(--wtdi-tint);
+  border-color: var(--wtdi-navy);
 }
 
 /* Numbered sections. The number hangs in the left margin on wider screens. */

@@ -42,6 +42,7 @@ layout: default
       <li><a href="#organisers"><span class="wtdi-num">5</span> Organisers</a></li>
       <li><a href="#conduct"><span class="wtdi-num">6</span> Code of Conduct</a></li>
     </ol>
+    <p class="wtdi-toc__more"><a href="{{ '/debriefs/' | relative_url }}">Debriefs from past events</a></p>
   </nav>
 </aside>
 
@@ -120,18 +121,17 @@ layout: default
       <li>
         <time class="wtdi-meta" datetime="{{ event.date }}">{{ event.date }}</time>
         <div>
-          <strong>{{ event.title }}</strong>{% if event.host %}, {% if event.host_url %}<a href="{{ event.host_url }}">{{ event.host }}</a>{% else %}{{ event.host }}{% endif %}{% endif %}.
+          <strong>{% if event.debrief %}<a href="{{ event.debrief | relative_url }}">{{ event.title }}</a>{% else %}{{ event.title }}{% endif %}</strong>{% if event.host %}, {% if event.host_url %}<a href="{{ event.host_url }}">{{ event.host }}</a>{% else %}{{ event.host }}{% endif %}{% endif %}.
           {%- if event.summary %} {{ event.summary }}{% endif %}
-          {%- if event.recording or event.debrief %}
-          <br>
-          {%- if event.recording %}<a href="{{ event.recording }}">Recording</a>{% endif %}
-          {%- if event.recording and event.debrief %} · {% endif %}
-          {%- if event.debrief %}<a href="{{ event.debrief | relative_url }}">Debrief</a>{% endif %}
-          {%- endif %}
+          {%- if event.recording %}<br><a href="{{ event.recording }}">Watch the recording</a>{% endif %}
         </div>
       </li>
       {%- endfor %}
     </ol>
+    <p class="wtdi-actions">
+      <a class="wtdi-button wtdi-button--quiet" href="{{ '/debriefs/' | relative_url }}">Read the debriefs</a>
+      <span class="wtdi-muted">Schedules, notes, and recordings from each event.</span>
+    </p>
     {%- endif %}
   </div>
 </section>

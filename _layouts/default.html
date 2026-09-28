@@ -15,16 +15,7 @@
 <body>
   <a class="wtdi-skip" href="#main">Skip to content</a>
 
-  <header class="wtdi-runhead">
-    <div class="wtdi-rule wtdi-rule--saffron" aria-hidden="true"></div>
-    <div class="wtdi-page wtdi-runhead__inner">
-      <a class="wtdi-runhead__title" href="{{ '/' | relative_url }}">Write the Docs India</a>
-      <nav aria-label="Site">
-        <a href="{{ '/debriefs/' | relative_url }}"{% if page.url contains '/debriefs/' %} aria-current="page"{% endif %}>Debriefs</a>
-        <a href="{{ site.links.whatsapp }}">WhatsApp</a>
-      </nav>
-    </div>
-  </header>
+  <div class="wtdi-rule wtdi-rule--saffron" aria-hidden="true"></div>
 
   <main id="main">
     {{ content }}
@@ -38,6 +29,7 @@
         and follow its <a href="{{ site.links.coc }}">Code of Conduct</a>.
       </p>
       <ul class="wtdi-footer__links">
+        <li><a href="{{ '/debriefs/' | relative_url }}">Debriefs</a></li>
         <li><a href="{{ site.links.whatsapp }}">WhatsApp</a></li>
         <li><a href="{{ site.links.linkedin }}">LinkedIn</a></li>
         <li><a href="{{ site.links.meetup }}">Meetup</a></li>
