@@ -1,0 +1,54 @@
+name: Talk proposal
+description: Pitch a lightning talk or a full talk for a Write the Docs India meetup.
+title: "Talk: "
+labels: ["talk proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for pitching a talk. A rough idea is fine.
+  - type: input
+    id: title
+    attributes:
+      label: Working title
+    validations:
+      required: true
+  - type: dropdown
+    id: format
+    attributes:
+      label: Format
+      options:
+        - Lightning talk (about 10 minutes)
+        - Full talk (about 20 minutes)
+        - Not sure yet
+    validations:
+      required: true
+  - type: textarea
+    id: abstract
+    attributes:
+      label: What's the talk about?
+      description: A few sentences. What will people know or be able to do afterwards?
+    validations:
+      required: true
+  - type: dropdown
+    id: attendance
+    attributes:
+      label: How would you present?
+      options:
+        - In person
+        - Online
+        - Either works
+    validations:
+      required: true
+  - type: input
+    id: city
+    attributes:
+      label: City
+      description: Helps us match you with an in-person meetup.
+  - type: checkboxes
+    id: coc
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow the [Write the Docs Code of Conduct](https://www.writethedocs.org/code-of-conduct/).
+          required: true
