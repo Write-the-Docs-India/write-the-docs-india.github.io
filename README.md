@@ -1,6 +1,6 @@
 # Write the Docs India
 
-Source for [writethedocs-india.github.io](https://writethedocs-india.github.io), the site for the India chapter of [Write the Docs](https://www.writethedocs.org/). It's a Jekyll site that GitHub Pages builds on every push to `main`.
+Source for [write-the-docs-india.github.io](https://write-the-docs-india.github.io), the site for the India chapter of [Write the Docs](https://www.writethedocs.org/). It's a Jekyll site that GitHub Pages builds on every push to `main`.
 
 ## Add an event
 
@@ -27,6 +27,10 @@ It publishes at `/debriefs/YYYY/short-name/`. Link it from the event with `debri
 `_config.yml` holds the community links (WhatsApp, LinkedIn, Meetup, Slack, Code of Conduct) and `cadence`, the regular meetup slot. The homepage hides the cadence line while it's empty.
 
 Organisers are listed in [`_data/organisers.yml`](_data/organisers.yml).
+
+## Deploy
+
+GitHub Pages builds the site with the same `github-pages` gem pinned in the `Gemfile`, so there's no separate workflow to maintain. In the repo settings, Pages is set to deploy from the `main` branch, root folder. Each push to `main` triggers a `pages-build-deployment` run in the Actions tab, and the site updates a minute or two later.
 
 ## Preview locally
 
@@ -56,6 +60,6 @@ These come from the Write the Docs [sustainable meetups guide](https://www.write
 
 ## Design
 
-The page borrows from how documents look: a running head, section numbers in the left margin, ruled sections, a contents list, change bars next to new items, and dates in the margin for past events. If you add something, try to keep it in that vocabulary.
+The page borrows from how documents look: the logo as a drop cap, section numbers in the left margin, ruled sections, a contents sidebar, change bars next to new items, and dates in the margin for past events. If you add something, try to keep it in that vocabulary.
 
 Colors come from the logo: navy `#07038D`, saffron `#FF671F`, green `#046A38`. Saffron fails contrast for text on white, so only use it for rules and marks. Headings use [Martel](https://fonts.google.com/specimen/Martel) and body text uses [Martel Sans](https://fonts.google.com/specimen/Martel+Sans), both designed alongside Devanagari, so Hindi or Marathi content would sit comfortably next to English. Dates and section numbers use IBM Plex Mono. The two handwritten margin notes use [Kalam](https://fonts.google.com/specimen/Kalam) from the Indian Type Foundry; keep them rare or they stop reading as notes. All styles are in `assets/css/site.css` under the `wtdi-` prefix.
