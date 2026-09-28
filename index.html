@@ -1,0 +1,214 @@
+---
+layout: default
+---
+{%- assign today = site.time | date: "%Y-%m-%d" -%}
+{%- assign events = site.data.events | sort: "date" -%}
+{%- assign upcoming = events | where_exp: "e", "e.date >= today" -%}
+{%- assign past = events | where_exp: "e", "e.date < today" | reverse -%}
+
+<div class="wtdi-page wtdi-title">
+  <div class="wtdi-title__margin">
+    <img src="{{ '/assets/img/write-the-docs-india-logo.svg' | relative_url }}" alt="Write the Docs India logo" width="120" height="120">
+  </div>
+  <div class="wtdi-title__body">
+    <h1>Write the Docs India</h1>
+    <p class="wtdi-lede">
+      The India chapter of <a href="{{ site.links.wtd }}">Write the Docs</a>,
+      for people who write and look after documentation.
+    </p>
+    <p>
+      Technical writers are at the centre of it, whether you write product docs,
+      API references, or manuals for a bank. So are the developers, advocates,
+      maintainers, and translators who end up owning docs, and anyone who would
+      rather contribute to open source by writing than by coding.
+    </p>
+    <p>
+      The chapter went quiet for a few years and picked up again in 2026. We
+      restarted with a docs devroom at IndiaFOSS in Bengaluru, and we're hoping
+      to get meetups going in cities across the country from here.
+    </p>
+    <p class="wtdi-actions">
+      <a class="wtdi-button" href="{{ site.links.whatsapp }}">Join the WhatsApp community</a>
+      <span class="wtdi-scribble wtdi-scribble--left">most of us hang out here</span>
+    </p>
+  </div>
+</div>
+
+<div class="wtdi-page wtdi-toc-wrap">
+  <nav class="wtdi-toc" aria-labelledby="toc-title">
+    <h2 id="toc-title" class="wtdi-toc__title">Contents</h2>
+    <ol>
+      <li><a href="#join"><span class="wtdi-num">1</span> Join us</a></li>
+      <li><a href="#events"><span class="wtdi-num">2</span> Events</a></li>
+      <li><a href="#speak"><span class="wtdi-num">3</span> Give a talk</a></li>
+      <li><a href="#cities"><span class="wtdi-num">4</span> Start a meetup in your city</a></li>
+      <li><a href="#organisers"><span class="wtdi-num">5</span> Organisers</a></li>
+      <li><a href="#conduct"><span class="wtdi-num">6</span> Code of Conduct</a></li>
+    </ol>
+  </nav>
+</div>
+
+<section class="wtdi-sec" id="join" aria-labelledby="join-title">
+  <div class="wtdi-page wtdi-sec__body">
+    <h2 id="join-title"><span class="wtdi-num">1</span> Join us</h2>
+    <p>
+      Pick whichever suits you. WhatsApp is where most of the conversation
+      happens.
+    </p>
+    <table class="wtdi-ref">
+      <thead>
+        <tr><th scope="col">Where</th><th scope="col">What it's for</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="{{ site.links.whatsapp }}">WhatsApp</a></td>
+          <td>Day-to-day chat, with a channel for each city where local meetups get planned.</td>
+        </tr>
+        <tr>
+          <td><a href="{{ site.links.linkedin }}">LinkedIn</a></td>
+          <td>Announcements and event recaps.</td>
+        </tr>
+        <tr>
+          <td><a href="{{ site.links.meetup }}">Meetup</a></td>
+          <td>Event pages and RSVPs.</td>
+        </tr>
+        <tr>
+          <td><a href="{{ site.links.slack_invite }}">Slack</a></td>
+          <td>Join the global Write the Docs Slack, then look up the <code>{{ site.links.slack_channel }}</code> channel.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="wtdi-sec" id="events" aria-labelledby="events-title">
+  <div class="wtdi-page wtdi-sec__body">
+    <h2 id="events-title"><span class="wtdi-num">2</span> Events</h2>
+    {%- if site.cadence != "" %}
+    <p>We meet on the {{ site.cadence }}.</p>
+    {%- endif %}
+
+    <h3>Upcoming</h3>
+    {%- if upcoming.size > 0 %}
+    <ol class="wtdi-events">
+      {%- for event in upcoming %}
+      <li class="wtdi-revmark">
+        <p class="wtdi-meta">
+          <time datetime="{{ event.date }}">{{ event.date | date: "%a %-d %b %Y" }}</time>
+          {%- if event.time %} · {{ event.time }}{% endif %}
+        </p>
+        <p class="wtdi-events__title">{{ event.title }}</p>
+        <p>
+          {{ event.format }}{% if event.location %}, {{ event.location }}{% endif %}
+          {%- if event.speakers %}<br>With {{ event.speakers | join: ", " }}{% endif %}
+        </p>
+        {%- if event.rsvp %}
+        <p><a href="{{ event.rsvp }}">RSVP<span class="wtdi-visually-hidden"> for {{ event.title }}</span></a></p>
+        {%- endif %}
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- else %}
+    <p class="wtdi-note">
+      Nothing scheduled yet. We're planning the first city meetups, and dates go
+      up here and in the <a href="{{ site.links.whatsapp }}">WhatsApp community</a> first.
+    </p>
+    {%- endif %}
+
+    {%- if past.size > 0 %}
+    <h3>Past events</h3>
+    <ol class="wtdi-past">
+      {%- for event in past %}
+      <li>
+        <time class="wtdi-meta" datetime="{{ event.date }}">{{ event.date }}</time>
+        <div>
+          <strong>{{ event.title }}</strong>{% if event.host %}, {% if event.host_url %}<a href="{{ event.host_url }}">{{ event.host }}</a>{% else %}{{ event.host }}{% endif %}{% endif %}.
+          {%- if event.summary %} {{ event.summary }}{% endif %}
+          {%- if event.recording or event.debrief %}
+          <br>
+          {%- if event.recording %}<a href="{{ event.recording }}">Recording</a>{% endif %}
+          {%- if event.recording and event.debrief %} · {% endif %}
+          {%- if event.debrief %}<a href="{{ event.debrief | relative_url }}">Debrief</a>{% endif %}
+          {%- endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- endif %}
+  </div>
+</section>
+
+<section class="wtdi-sec" id="speak" aria-labelledby="speak-title">
+  <div class="wtdi-page wtdi-sec__body">
+    <h2 id="speak-title"><span class="wtdi-num">3</span> Give a talk <span class="wtdi-scribble">first-timers welcome</span></h2>
+    <p>
+      Talks at the devroom covered docs tooling, translation, accessibility,
+      contributor onboarding, and writing for AI agents. Several people were
+      giving their first talk. If something from your own work would help other
+      documentarians, pitch it.
+    </p>
+    <table class="wtdi-ref">
+      <thead>
+        <tr><th scope="col">Format</th><th scope="col">Length</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Lightning talk</td><td>About 10 minutes</td></tr>
+        <tr><td>Talk</td><td>About 20 minutes, plus questions</td></tr>
+      </tbody>
+    </table>
+    <p>
+      <a href="{{ site.links.talk_proposal }}">Propose a talk on GitHub</a>, or post
+      the idea in the WhatsApp community.
+    </p>
+  </div>
+</section>
+
+<section class="wtdi-sec" id="cities" aria-labelledby="cities-title">
+  <div class="wtdi-page wtdi-sec__body">
+    <h2 id="cities-title"><span class="wtdi-num">4</span> Start a meetup in your city</h2>
+    <p>
+      We'd love regular meetups in Bengaluru, Chennai, Hyderabad, Pune, and Delhi
+      NCR (and anywhere else people want one), run by people who live there. If
+      you'd like to start one in your city, message us in the WhatsApp community
+      and we'll work it out with you.
+    </p>
+    <p>
+      A meetup needs a room with a screen and Wi-Fi for a couple of hours. If your
+      office, college, or coworking space could lend one, tell us. For background
+      reading, Write the Docs keeps a general
+      <a href="{{ site.links.starting_guide }}">guide to starting a meetup</a>.
+    </p>
+  </div>
+</section>
+
+<section class="wtdi-sec" id="organisers" aria-labelledby="organisers-title">
+  <div class="wtdi-page wtdi-sec__body">
+    <h2 id="organisers-title"><span class="wtdi-num">5</span> Organisers</h2>
+    <ul class="wtdi-people">
+      {%- for person in site.data.organisers %}
+      <li>
+        {% if person.link %}<a href="{{ person.link }}">{{ person.name }}</a>{% else %}{{ person.name }}{% endif %}
+        <span class="wtdi-muted">{{ person.role }}{% if person.company %}, {{ person.company }}{% endif %}{% if person.city %}, {{ person.city }}{% endif %}</span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="wtdi-sec" id="conduct" aria-labelledby="conduct-title">
+  <div class="wtdi-page wtdi-sec__body">
+    <h2 id="conduct-title"><span class="wtdi-num">6</span> Code of Conduct</h2>
+    <blockquote class="wtdi-quote">
+      <p>"We are dedicated to providing a safe, inclusive, welcoming, and harassment-free space and experience for all community participants."</p>
+    </blockquote>
+    <p>
+      Write the Docs India follows the
+      <a href="{{ site.links.coc }}">Write the Docs Code of Conduct</a>
+      (<a href="{{ site.links.coc_meetups }}">short version for meetups</a>) and its
+      <a href="{{ site.links.principles }}">guiding principles</a>, at events and in
+      the WhatsApp community and other channels above. To report a
+      problem, talk to any organiser or email
+      <a href="mailto:{{ site.links.coc_email }}">{{ site.links.coc_email }}</a>.
+    </p>
+  </div>
+</section>

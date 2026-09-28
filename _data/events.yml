@@ -1,0 +1,39 @@
+# Every meetup, talk night, and devroom the chapter runs or co-hosts.
+# The homepage sorts these by date: anything on or after the build date shows
+# under "Upcoming", the rest under "Past events". GitHub Pages rebuilds on
+# every push.
+#
+# Fields
+#   date:      "YYYY-MM-DD" (quote it so YAML keeps it as text)
+#   time:      free text, in IST
+#   title:     what the event is
+#   format:    In person | Online | Hybrid
+#   location:  venue and city, or the platform for online events
+#   host:      optional, a partner event or community hosting us
+#   host_url:  optional
+#   speakers:  optional list of names
+#   summary:   optional, one line for "Past events"
+#   rsvp:      link people use to sign up (upcoming events)
+#   recording: optional link to the video
+#   debrief:   optional path to the debrief post, e.g. /debriefs/2026/indiafoss-2026-devroom/
+#
+# Example upcoming entry:
+# - date: "2026-11-14"
+#   time: "11:00 to 13:00 IST"
+#   title: "Docs and chai: API reference teardown"
+#   format: In person
+#   location: "Venue TBD, Bengaluru"
+#   speakers:
+#     - "Speaker Name"
+#   rsvp: https://www.meetup.com/write-the-docs-india/
+
+- date: "2026-09-26"
+  time: "10:00 to 12:45 IST"
+  title: "Documentation and Technical Writing devroom"
+  format: In person
+  location: "Hall 3, first floor, NIMHANS Convention Centre, Bengaluru"
+  host: IndiaFOSS 2026
+  host_url: https://fossunited.org/indiafoss/2026/devrooms/docs
+  summary: "Ten talks in one morning, to a full room."
+  recording: https://www.youtube.com/live/KNKAi9dfZxA
+  debrief: /debriefs/2026/indiafoss-2026-devroom/

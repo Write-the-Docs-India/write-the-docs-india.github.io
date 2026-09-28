@@ -1,0 +1,16 @@
+# People who run the chapter. `link` is optional.
+- name: Srihari Thyagarajan
+  role: Technical Writer
+  company: Deepnote
+  city: Chennai
+  link: https://haleshot.github.io/
+- name: Sujatha Mohan
+  role: Lead Information Developer
+  company: IBM
+  city: Bengaluru
+  link: https://www.linkedin.com/in/sujatharamakrishnan/
+- name: Agriya Khetarpal
+  role: Software Engineer
+  company: Quansight
+  city: Delhi
+  link: https://agriyakhetarp.al/
