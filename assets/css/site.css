@@ -195,21 +195,27 @@ code {
   text-decoration-thickness: 2px;
 }
 
-/* Title block: logo in the margin, text in the body column */
+/* Title block: the logo works as a drop cap, with the intro wrapping around it */
 
 .wtdi-title {
-  display: grid;
-  gap: 1.5rem var(--wtdi-gutter);
   padding-top: 2.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2.5rem;
 }
 
-.wtdi-title__margin img {
-  width: 88px;
+.wtdi-title::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-.wtdi-title__body > * {
+.wtdi-title > p {
   max-width: var(--wtdi-measure);
+}
+
+.wtdi-dropcap {
+  float: left;
+  width: 112px;
+  margin: 0.35rem 1.25rem 0.5rem 0;
 }
 
 .wtdi-lede {
@@ -218,46 +224,60 @@ code {
 }
 
 @media (min-width: 48rem) {
-  .wtdi-title {
-    grid-template-columns: var(--wtdi-margin) minmax(0, 1fr);
-    column-gap: 0;
+  .wtdi-dropcap {
+    width: 240px;
+    margin: 0.35rem 2rem 1rem 0;
   }
 
-  .wtdi-title__margin img {
-    width: 104px;
+  /* Keep the intro in one column beside the logo instead of wrapping a
+     stray line underneath it */
+  .wtdi-title > p {
+    overflow: hidden;
   }
 }
 
-/* Contents, under a rule after the title block */
+/* Document body with the contents list as a sticky sidebar on the right */
 
-.wtdi-toc-wrap {
-  position: relative;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
+.wtdi-doc {
+  display: flex;
+  flex-direction: column;
 }
 
-.wtdi-toc-wrap::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: var(--wtdi-gutter);
-  right: var(--wtdi-gutter);
+.wtdi-doc__toc {
+  padding: 1.25rem 0 0.5rem;
   border-top: 1px solid var(--wtdi-rule);
 }
 
+.wtdi-doc .wtdi-sec__body::before {
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 64rem) {
+  .wtdi-doc {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    column-gap: 3rem;
+  }
+
+  .wtdi-doc__main {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .wtdi-doc__toc {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: start;
+    position: sticky;
+    top: 1.5rem;
+    padding-top: 2.5rem;
+  }
+}
+
 @media (min-width: 48rem) {
-  .wtdi-toc {
+  .wtdi-doc .wtdi-sec__body {
     padding-left: var(--wtdi-margin);
-  }
-
-  .wtdi-toc ol {
-    columns: 2;
-    column-gap: 2.5rem;
-    max-width: calc(var(--wtdi-measure) + 4rem);
-  }
-
-  .wtdi-toc li {
-    break-inside: avoid;
   }
 }
 

@@ -7,34 +7,31 @@ layout: default
 {%- assign past = events | where_exp: "e", "e.date < today" | reverse -%}
 
 <div class="wtdi-page wtdi-title">
-  <div class="wtdi-title__margin">
-    <img src="{{ '/assets/img/write-the-docs-india-logo.svg' | relative_url }}" alt="Write the Docs India logo" width="120" height="120">
-  </div>
-  <div class="wtdi-title__body">
-    <h1>Write the Docs India</h1>
-    <p class="wtdi-lede">
-      The India chapter of <a href="{{ site.links.wtd }}">Write the Docs</a>,
-      for people who write and look after documentation.
-    </p>
-    <p>
-      Technical writers are at the centre of it, whether you write product docs,
-      API references, or manuals for a bank. So are the developers, advocates,
-      maintainers, and translators who end up owning docs, and anyone who would
-      rather contribute to open source by writing than by coding.
-    </p>
-    <p>
-      The chapter went quiet for a few years and picked up again in 2026. We
-      restarted with a docs devroom at IndiaFOSS in Bengaluru, and we're hoping
-      to get meetups going in cities across the country from here.
-    </p>
-    <p class="wtdi-actions">
-      <a class="wtdi-button" href="{{ site.links.whatsapp }}">Join the WhatsApp community</a>
-      <span class="wtdi-scribble wtdi-scribble--left">most of us hang out here</span>
-    </p>
-  </div>
+  <h1 class="wtdi-visually-hidden">Write the Docs India</h1>
+  <img class="wtdi-dropcap" src="{{ '/assets/img/write-the-docs-india-logo.svg' | relative_url }}" alt="Write the Docs India logo" width="240" height="240">
+  <p class="wtdi-lede">
+    The India chapter of <a href="{{ site.links.wtd }}">Write the Docs</a>,
+    for people who write and look after documentation.
+  </p>
+  <p>
+    Technical writers are at the centre of it, whether you write product docs,
+    API references, or manuals for a bank. So are the developers, advocates,
+    maintainers, and translators who end up owning docs, and anyone who would
+    rather contribute to open source by writing than by coding.
+  </p>
+  <p>
+    The chapter went quiet for a few years and picked up again in 2026. We
+    restarted with a docs devroom at IndiaFOSS in Bengaluru, and we're hoping
+    to get meetups going in cities across the country from here.
+  </p>
+  <p class="wtdi-actions">
+    <a class="wtdi-button" href="{{ site.links.whatsapp }}">Join the WhatsApp community</a>
+    <span class="wtdi-scribble wtdi-scribble--left">most of us hang out here</span>
+  </p>
 </div>
 
-<div class="wtdi-page wtdi-toc-wrap">
+<div class="wtdi-page wtdi-doc">
+<aside class="wtdi-doc__toc">
   <nav class="wtdi-toc" aria-labelledby="toc-title">
     <h2 id="toc-title" class="wtdi-toc__title">Contents</h2>
     <ol>
@@ -46,10 +43,11 @@ layout: default
       <li><a href="#conduct"><span class="wtdi-num">6</span> Code of Conduct</a></li>
     </ol>
   </nav>
-</div>
+</aside>
 
+<div class="wtdi-doc__main">
 <section class="wtdi-sec" id="join" aria-labelledby="join-title">
-  <div class="wtdi-page wtdi-sec__body">
+  <div class="wtdi-sec__body">
     <h2 id="join-title"><span class="wtdi-num">1</span> Join us</h2>
     <p>
       Pick whichever suits you. WhatsApp is where most of the conversation
@@ -82,7 +80,7 @@ layout: default
 </section>
 
 <section class="wtdi-sec" id="events" aria-labelledby="events-title">
-  <div class="wtdi-page wtdi-sec__body">
+  <div class="wtdi-sec__body">
     <h2 id="events-title"><span class="wtdi-num">2</span> Events</h2>
     {%- if site.cadence != "" %}
     <p>We meet on the {{ site.cadence }}.</p>
@@ -139,7 +137,7 @@ layout: default
 </section>
 
 <section class="wtdi-sec" id="speak" aria-labelledby="speak-title">
-  <div class="wtdi-page wtdi-sec__body">
+  <div class="wtdi-sec__body">
     <h2 id="speak-title"><span class="wtdi-num">3</span> Give a talk <span class="wtdi-scribble">first-timers welcome</span></h2>
     <p>
       Talks at the devroom covered docs tooling, translation, accessibility,
@@ -164,7 +162,7 @@ layout: default
 </section>
 
 <section class="wtdi-sec" id="cities" aria-labelledby="cities-title">
-  <div class="wtdi-page wtdi-sec__body">
+  <div class="wtdi-sec__body">
     <h2 id="cities-title"><span class="wtdi-num">4</span> Start a meetup in your city</h2>
     <p>
       We'd love regular meetups in Bengaluru, Chennai, Hyderabad, Pune, and Delhi
@@ -182,7 +180,7 @@ layout: default
 </section>
 
 <section class="wtdi-sec" id="organisers" aria-labelledby="organisers-title">
-  <div class="wtdi-page wtdi-sec__body">
+  <div class="wtdi-sec__body">
     <h2 id="organisers-title"><span class="wtdi-num">5</span> Organisers</h2>
     <ul class="wtdi-people">
       {%- for person in site.data.organisers %}
@@ -196,7 +194,7 @@ layout: default
 </section>
 
 <section class="wtdi-sec" id="conduct" aria-labelledby="conduct-title">
-  <div class="wtdi-page wtdi-sec__body">
+  <div class="wtdi-sec__body">
     <h2 id="conduct-title"><span class="wtdi-num">6</span> Code of Conduct</h2>
     <blockquote class="wtdi-quote">
       <p>"We are dedicated to providing a safe, inclusive, welcoming, and harassment-free space and experience for all community participants."</p>
@@ -212,3 +210,5 @@ layout: default
     </p>
   </div>
 </section>
+</div>
+</div>
