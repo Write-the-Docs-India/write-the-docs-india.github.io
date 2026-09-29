@@ -36,7 +36,7 @@ Pull requests also get a preview build on Read the Docs, configured in [`.readth
 
 ## Preview locally
 
-With Ruby 3.x:
+With Ruby 3.x (the Ruby that ships with macOS is 2.6, which is too old; `brew install ruby` gets a current one):
 
 ```sh
 bundle install
@@ -46,11 +46,11 @@ bundle exec jekyll serve
 Or with Docker, without installing Ruby:
 
 ```sh
-docker run --rm -it -p 4000:4000 -v "$PWD":/srv -w /srv ruby:3.3 \
-  sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0"
+docker run --rm -p 4000:4000 -v "$PWD":/srv -v wtdi-gems:/usr/local/bundle -w /srv ruby:3.3 \
+  sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --force_polling"
 ```
 
-Then open <http://localhost:4000>.
+Then open <http://localhost:4000>. Docker Desktop has to be running, and nothing else can be using port 4000. The `wtdi-gems` volume keeps the installed gems between runs, so only the first start is slow, and `--force_polling` makes Jekyll notice edits made on the Mac side. Restart it after changing `_config.yml`, since Jekyll only reads that file at startup.
 
 ## Planning notes
 
