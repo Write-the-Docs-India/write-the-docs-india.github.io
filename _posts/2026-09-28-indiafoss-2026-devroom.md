@@ -99,7 +99,7 @@ In running order. The timestamp in the margin takes you to that talk in the reco
     <div>
       <strong><a href="https://fossunited.org/c/indiafoss/2026/cfp/76r6ku6p9h">Changelogs Are Not Enough: Writing Community Memory for Kubernetes</a></strong><br>
       <span class="wtdi-muted">Harini Anand, IBM</span>
-      <p>Harini writes and edits for Last Week in Kubernetes Development (LWKD), a SIG Contributor Experience newsletter. A changelog tells you what changed; a new contributor wants to know what deserves their attention. She walked through the judgment calls behind a single LWKD paragraph, and left us with a line we'd happily put on a poster: writing is not a consolation prize in open source.</p>
+      <p>Harini writes and edits for Last Week in Kubernetes Development (LWKD), a SIG Contributor Experience newsletter. A changelog tells you what changed; a new contributor wants to know what deserves their attention. She walked through the judgment calls behind a single LWKD paragraph, and made a case we'd happily put on a poster: in her words, "writing is not a consolation prize in open source."</p>
     </div>
   </li>
   <li>
