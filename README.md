@@ -32,6 +32,8 @@ Organisers are listed in [`_data/organisers.yml`](_data/organisers.yml).
 
 GitHub Pages builds the site with the same `github-pages` gem pinned in the `Gemfile`, so there's no separate workflow to maintain. In the repo settings, Pages is set to deploy from the `main` branch, root folder. Each push to `main` triggers a `pages-build-deployment` run in the Actions tab, and the site updates a minute or two later.
 
+Pull requests also get a preview build on Read the Docs, configured in [`.readthedocs.yaml`](.readthedocs.yaml). The Read the Docs bot comments on the PR with a link to the preview and the pages that changed. Direct pushes to `main` skip this, so open a PR when you want someone to look first.
+
 ## Preview locally
 
 With Ruby 3.x:
