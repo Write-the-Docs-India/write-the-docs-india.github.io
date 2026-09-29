@@ -1,0 +1,15 @@
+# Read the Docs builds a preview of the site for each pull request.
+# GitHub Pages still serves the live site from main.
+# See https://docs.readthedocs.com/platform/stable/config-file/v2.html
+
+version: 2
+
+build:
+  os: ubuntu-24.04
+  tools:
+    ruby: "3.3"
+  commands:
+    - bundle install
+    # Previews live under a sub-path such as /en/12/, so strip the scheme and
+    # host from the canonical URL and pass the rest to Jekyll as the base URL.
+    - bundle exec jekyll build --destination "$READTHEDOCS_OUTPUT/html" --baseurl "/${READTHEDOCS_CANONICAL_URL#*://*/}"
