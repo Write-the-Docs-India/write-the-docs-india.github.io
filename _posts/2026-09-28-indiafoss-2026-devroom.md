@@ -17,9 +17,9 @@ Srihari wrote the [devroom proposal](https://forum.fossunited.org/t/call-for-dev
 
 We got far more proposals than three hours could hold, which is a lovely problem to have, and choosing between them was the hardest part of the whole thing. A few of them would work even better as hands-on sessions, and we'd love to bring those to a meetup.
 
-In the weeks before the conference, several speakers did a mock run with us over a call, and we went through most decks before they went onto the presentation laptop (a few only reached us at the last minute).
+In the weeks before the conference, several speakers did a mock run with us over a call, and we went through most decks before they went onto the presentation laptop.
 
-*A big thank you to Gauri Dasgupta, Aaishwarya Mishra, and Mahima Agarwal, who reviewed decks with us and sat in on the mock runs.*
+*A big thank you to Aaishwarya Mishra and Mahima Agarwal, who reviewed decks with us and sat in on the mock runs.*
 
 Unfortunately, three of our speakers couldn't make it in the last week, for reasons outside anyone's control. We were sorry to miss their talks and hope to hear them at a meetup soon. Pooja Sanwal came in from the waitlist at very short notice and ended up opening the devroom. Thank you, Pooja!! We planned to use one of the open slots for an unconference.
 
