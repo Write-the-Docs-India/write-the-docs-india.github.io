@@ -29,7 +29,7 @@ Getting the livestream going took longer than planned right at the start, which 
 
 <!--
 ALBUM EMBED
-Put the photo carousel here. Photos go in assets/img/debriefs/2026-indiafoss/.
+Put the photo carousel here. Photos go in assets/img/blog/2026-indiafoss/.
 -->
 
 ## Schedule

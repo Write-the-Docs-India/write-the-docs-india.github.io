@@ -494,7 +494,7 @@ h2 .wtdi-scribble {
   color: var(--wtdi-green);
 }
 
-/* Past events and debriefs: dates sit in the margin */
+/* Past events and blog posts: dates sit in the margin */
 
 .wtdi-past {
   list-style: none;
@@ -525,7 +525,7 @@ h2 .wtdi-scribble {
   }
 }
 
-/* Talk rundown in a debrief: the recording timestamp sits in the margin */
+/* Talk rundown in a blog post: the recording timestamp sits in the margin */
 
 .wtdi-talks .wtdi-stamp {
   align-self: start;
@@ -556,7 +556,7 @@ h2 .wtdi-scribble {
   margin-left: 0.5rem;
 }
 
-/* Debrief thumbnails on the debriefs list */
+/* Post thumbnails on the blog list */
 
 .wtdi-thumb {
   display: block;
