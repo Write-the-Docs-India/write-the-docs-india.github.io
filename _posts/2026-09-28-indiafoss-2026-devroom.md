@@ -3,6 +3,10 @@ layout: post
 title: "IndiaFOSS 2026: the docs devroom"
 description: Ten talks in one morning, and the chapter's restart.
 image: https://img.youtube.com/vi/KNKAi9dfZxA/maxresdefault.jpg
+authors:
+  - Srihari Thyagarajan
+  - Agriya Khetarpal
+  - Sujatha Mohan
 ---
 
 On 26 September 2026 we ran the [Documentation and Technical Writing devroom](https://fossunited.org/indiafoss/2026/devrooms/docs) at IndiaFOSS 2026, in Hall 3 at NIMHANS Convention Centre, Bengaluru. Sujatha Mohan, Agriya Khetarpal, and Srihari Thyagarajan organised it. It was the first thing Write the Docs India did after restarting this year.

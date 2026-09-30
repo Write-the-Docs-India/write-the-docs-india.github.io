@@ -5,6 +5,13 @@ layout: default
   <div class="wtdi-page wtdi-sec__body wtdi-prose">
     <p class="wtdi-meta"><a href="{{ '/' | relative_url }}">Write the Docs India</a> / <a href="{{ '/blog/' | relative_url }}">Blog</a> / <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
     <h1>{{ page.title }}</h1>
+    {%- if page.authors %}
+    <p class="wtdi-byline"><em>~ {% for name in page.authors -%}
+      {%- assign person = site.data.organisers | where: "name", name | first -%}
+      {%- if person.link %}<a href="{{ person.link }}">{{ name }}</a>{% else %}{{ name }}{% endif -%}
+      {%- if forloop.rindex == 2 %}{% if forloop.length > 2 %},{% endif %} and {% elsif forloop.last == false %}, {% endif -%}
+    {%- endfor %}</em></p>
+    {%- endif %}
     {{ content }}
   </div>
 </article>

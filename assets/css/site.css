@@ -599,6 +599,11 @@ h2 .wtdi-scribble {
 
 /* Posts */
 
+.wtdi-byline {
+  margin-top: -0.25rem;
+  color: var(--wtdi-muted);
+}
+
 .wtdi-prose h2 {
   margin-top: 2.5rem;
 }

@@ -15,12 +15,14 @@ Add a Markdown file to `_posts/` named `YYYY-MM-DD-short-name.md`:
 layout: post
 title: "Meetup name: what it was about"
 description: One line for the blog list.
+authors:
+  - Your Name
 ---
 
 Who spoke, what they covered, links to slides and recordings.
 ```
 
-It publishes at `/blog/YYYY/short-name/`. Link it from the event with `blog:` in `events.yml`. Put photos in `assets/img/blog/<event>/`.
+Names under `authors` show as a byline under the title, linked to their page if they're in `organisers.yml`. It publishes at `/blog/YYYY/short-name/`. Link it from the event with `blog:` in `events.yml`. Put photos in `assets/img/blog/<event>/`.
 
 ## Other settings
 
