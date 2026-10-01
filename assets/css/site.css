@@ -433,6 +433,7 @@ h2 .wtdi-scribble {
   border-bottom: 1px solid var(--wtdi-ink);
 }
 
+.wtdi-ref th,
 .wtdi-ref td:first-child {
   white-space: nowrap;
   overflow-wrap: normal;
@@ -493,7 +494,7 @@ h2 .wtdi-scribble {
   color: var(--wtdi-green);
 }
 
-/* Past events and debriefs: dates sit in the margin */
+/* Past events and blog posts: dates sit in the margin */
 
 .wtdi-past {
   list-style: none;
@@ -522,6 +523,46 @@ h2 .wtdi-scribble {
     grid-template-columns: var(--wtdi-margin) 1fr;
     gap: 0;
   }
+}
+
+/* Talk rundown in a blog post: the recording timestamp sits in the margin */
+
+.wtdi-talks .wtdi-stamp {
+  align-self: start;
+  padding-top: 0.2rem;
+  color: var(--wtdi-navy);
+  text-decoration: none;
+}
+
+.wtdi-talks .wtdi-stamp:hover,
+.wtdi-talks .wtdi-stamp:focus {
+  text-decoration: underline;
+}
+
+.wtdi-talks p {
+  margin: 0.4rem 0 0;
+}
+
+/* Something planned that didn't happen: struck through in saffron */
+
+.wtdi-ref del {
+  color: var(--wtdi-muted);
+  text-decoration-color: var(--wtdi-saffron);
+  text-decoration-thickness: 2px;
+}
+
+.wtdi-ref .wtdi-scribble {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+/* Post thumbnails on the blog list */
+
+.wtdi-thumb {
+  display: block;
+  max-width: 18rem;
+  margin-top: 0.5rem;
+  border: 1px solid var(--wtdi-line);
 }
 
 /* Organisers and quotes */
@@ -557,6 +598,11 @@ h2 .wtdi-scribble {
 }
 
 /* Posts */
+
+.wtdi-byline {
+  margin-top: -0.25rem;
+  color: var(--wtdi-muted);
+}
 
 .wtdi-prose h2 {
   margin-top: 2.5rem;

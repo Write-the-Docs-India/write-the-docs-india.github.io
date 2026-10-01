@@ -35,7 +35,7 @@ links:
 # Leave empty until the organisers agree on one; the homepage hides it when blank.
 cadence: ""
 
-permalink: /debriefs/:year/:title/
+permalink: /blog/:year/:title/
 
 plugins:
   - jekyll-feed
@@ -43,7 +43,7 @@ plugins:
   - jekyll-sitemap
 
 feed:
-  path: debriefs/feed.xml
+  path: blog/feed.xml
 
 exclude:
   - README.md
