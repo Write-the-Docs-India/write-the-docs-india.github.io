@@ -148,6 +148,6 @@ To every speaker, for the weeks of work behind these talks and for putting up wi
 
 We want Write the Docs India to be a regular thing: meetups in a few cities where people who write and maintain docs can show their work and learn from each other. Going by the proposals and the room that morning, there's a lot of interest!!
 
-City meetups come first. The [WhatsApp community]({{ site.links.whatsapp }}) has a channel for each city, and that's where the planning happens. Between the three of us we're in Bengaluru, Chennai, and Delhi, and people in Pune are already keen to start one there. If you spoke at the devroom or came to watch and want to help run a meetup where you live, say hello there.
+City meetups come first. For now, the [WhatsApp community]({{ site.links.whatsapp }}) has a general channel and a volunteers channel, and that's where the planning happens. We'll add a channel for each city as local groups get going. Between the three of us we're in Bengaluru, Chennai, and Delhi, and people in Pune are already keen to start one there. If you spoke at the devroom or came to watch and want to help run a meetup where you live, say hello there.
 
 The workshop-style proposals we received are exactly the kind of thing we'd like to run at a meetup, and talk ideas are welcome any time through the [talk proposal form]({{ site.links.talk_proposal }}). Once we settle on a regular date, it'll go on the homepage, and we'll write up each meetup here.
