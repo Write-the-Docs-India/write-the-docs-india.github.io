@@ -17,9 +17,9 @@ Like every devroom at IndiaFOSS, ours was open to anyone at the conference. Writ
 
 ## How it came together
 
-Srihari wrote the [devroom proposal](https://forum.fossunited.org/t/call-for-devrooms-for-indiafoss-2026/7587/4) back in April with Agriya, who he also runs [SciPy India](https://scipy.in) with, in reply to IndiaFOSS's call for devrooms. Neither of us was sure it would get picked (a whole room just for docs?). When it did, we went looking for a third person to run it with us. Sujatha had been reacting to the messages Srihari posted about the proposal in the #india channel on the Write the Docs Slack, so we reached out to her. We're very glad she said yes!!
+Srihari wrote the [devroom proposal](https://forum.fossunited.org/t/call-for-devrooms-for-indiafoss-2026/7587/4) back in April with Agriya, who he also runs [SciPy India](https://scipy.in) with, in reply to IndiaFOSS's [call for devrooms](https://forum.fossunited.org/t/call-for-devrooms-for-indiafoss-2026/7587?u=srihari_thyagarajan). Neither of us was sure it would get picked (a whole room just for docs?). When it did, we went looking for a third person to run it with us. Sujatha had been reacting to the messages Srihari posted about the proposal in the #india channel on the Write the Docs Slack, so we reached out to her. We're very glad she said yes!!
 
-We got far more proposals than three hours could hold, which is a lovely problem to have, and choosing between them was the hardest part of the whole thing. A few of them would work even better as hands-on sessions, and we'd love to bring those to a meetup.
+We got far more proposals than three hours could hold, which is a lovely problem to have, and choosing between them was the hardest part of the whole thing. A few of them would work even better as hands-on sessions, and we'd love to bring those to a future meetup.
 
 In the weeks before the conference, several speakers did a mock run with us over a call, and we went through most decks before they went onto the presentation laptop.
 
