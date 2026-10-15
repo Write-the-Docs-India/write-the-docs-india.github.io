@@ -31,10 +31,7 @@ Unfortunately, three of our speakers couldn't make it in the last week, for reas
 
 Getting the livestream going took longer than planned right at the start, which is why the first 19 minutes of the recording show only the IndiaFOSS devroom overlay. Once it was up, the three of us opened with a short introduction to the devroom and the chapter. The delay used up the time we'd set aside for the unconference (you'll see it struck out below), so it's on our list for a future meetup.
 
-<!--
-ALBUM EMBED
-Put the photo carousel here. Photos go in assets/img/blog/2026-indiafoss/.
--->
+<iframe src="https://embed.ente.com/?t=RDW6BEPSWS#Hyqj4Jd7hexTT2fAhf2e3azw3DYFTwrMxjLydEyy8ZJT" width="800" height="600" frameborder="0" allowfullscreen style="max-width: 100%;"></iframe>
 
 ## Schedule
 
