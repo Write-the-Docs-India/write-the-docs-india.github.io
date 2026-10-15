@@ -6,7 +6,7 @@ Source for [write-the-docs-india.github.io](https://write-the-docs-india.github.
 
 Add an entry to [`_data/events.yml`](_data/events.yml). The comment at the top of that file lists the fields. Events dated today or later show under "Upcoming"; older ones move to "Past events" on the next build.
 
-## Write a debrief
+## Write a blog post
 
 Add a Markdown file to `_posts/` named `YYYY-MM-DD-short-name.md`:
 
@@ -14,13 +14,15 @@ Add a Markdown file to `_posts/` named `YYYY-MM-DD-short-name.md`:
 ---
 layout: post
 title: "Meetup name: what it was about"
-description: One line for the debriefs list.
+description: One line for the blog list.
+authors:
+  - Your Name
 ---
 
 Who spoke, what they covered, links to slides and recordings.
 ```
 
-It publishes at `/debriefs/YYYY/short-name/`. Link it from the event with `debrief:` in `events.yml`. Put photos in `assets/img/debriefs/<event>/`.
+Names under `authors` show as a byline under the title, linked to their page if they're in `organisers.yml`. It publishes at `/blog/YYYY/short-name/`. Link it from the event with `blog:` in `events.yml`. Put photos in `assets/img/blog/<event>/`.
 
 ## Other settings
 
