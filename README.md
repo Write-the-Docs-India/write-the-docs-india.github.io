@@ -26,7 +26,7 @@ Names under `authors` show as a byline under the title, linked to their page if 
 
 ## Other settings
 
-`_config.yml` holds the community links (WhatsApp, LinkedIn, Meetup, Slack, Code of Conduct) and `cadence`, the regular meetup slot. The homepage hides the cadence line while it's empty.
+`_config.yml` holds the community links (WhatsApp, LinkedIn, Luma, Slack, Code of Conduct) and `cadence`, the regular meetup slot. The homepage hides the cadence line while it's empty.
 
 Organisers are listed in [`_data/organisers.yml`](_data/organisers.yml).
 
