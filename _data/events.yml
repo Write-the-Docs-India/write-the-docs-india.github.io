@@ -9,11 +9,14 @@
 #   title:     what the event is
 #   format:    In person | Online | Hybrid
 #   location:  venue and city, or the platform for online events
-#   host:      optional, a partner event or community hosting us
+#   host:      optional, a conference, partner event, or community hosting us
 #   host_url:  optional
+#   partner:   optional, a community (or communities) we are collaborating with to organise the event
+#   partner_url: optional
 #   speakers:  optional list of names
 #   summary:   optional, one line for "Past events"
 #   rsvp:      link people use to sign up (upcoming events)
+#   cfp:       optional, link to the call for proposals (upcoming events)
 #   recording: optional link to the video
 #   blog:      optional path to the blog post, e.g. /blog/2026/indiafoss-2026-devroom/
 #
@@ -37,3 +40,13 @@
   summary: "Ten talks in one morning, to a full room."
   recording: https://www.youtube.com/live/KNKAi9dfZxA
   blog: /blog/2026/indiafoss-2026-devroom/
+
+- date: "2026-11-28"
+  time: "14:00 to 17:00 IST"
+  title: "Documentation and Technical Writing meetup"
+  format: In person
+  location: "Samagata Foundation, Church Street, Bengaluru"
+  partner: FOSS United Bengaluru
+  partner_url: https://fossunited.org/c/bengaluru
+  rsvp: https://fossunited.org/c/bengaluru/nov-2026
+  cfp: https://fossunited.org/c/bengaluru/nov-2026/cfp
