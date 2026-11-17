@@ -458,6 +458,17 @@ h2 .wtdi-scribble {
   margin: 0 0 0.25rem;
 }
 
+.wtdi-events__when {
+  font-family: var(--wtdi-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--wtdi-ink);
+}
+
+.wtdi-events__when time {
+  color: var(--wtdi-green);
+}
+
 .wtdi-events__title {
   font-family: var(--wtdi-serif);
   font-size: 1.2rem;

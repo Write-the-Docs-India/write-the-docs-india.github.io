@@ -101,17 +101,23 @@ layout: default
     <ol class="wtdi-events">
       {%- for event in upcoming %}
       <li class="wtdi-revmark">
-        <p class="wtdi-meta">
+        <p class="wtdi-events__when">
           <time datetime="{{ event.date }}">{{ event.date | date: "%a %-d %b %Y" }}</time>
-          {%- if event.time %} · {{ event.time }}{% endif %}
+          {%- if event.time %}, {{ event.time }}{% endif %}
         </p>
-        <p class="wtdi-events__title">{{ event.title }}</p>
+        <p class="wtdi-events__title">{% if event.rsvp %}<a href="{{ event.rsvp }}">{{ event.title }}</a>{% else %}{{ event.title }}{% endif %}</p>
         <p>
           {{ event.format }}{% if event.location %}, {{ event.location }}{% endif %}
+          {%- if event.host %}<br>Hosted by {% if event.host_url %}<a href="{{ event.host_url }}">{{ event.host }}</a>{% else %}{{ event.host }}{% endif %}{% endif %}
+          {%- if event.partner %}<br>Co-organised with {% if event.partner_url %}<a href="{{ event.partner_url }}">{{ event.partner }}</a>{% else %}{{ event.partner }}{% endif %}{% endif %}
           {%- if event.speakers %}<br>With {{ event.speakers | join: ", " }}{% endif %}
         </p>
-        {%- if event.rsvp %}
-        <p><a href="{{ event.rsvp }}">RSVP<span class="wtdi-visually-hidden"> for {{ event.title }}</span></a></p>
+        {%- if event.rsvp or event.cfp %}
+        <p>
+          {%- if event.rsvp %}<a href="{{ event.rsvp }}">RSVP<span class="wtdi-visually-hidden"> for {{ event.title }}</span></a>{% endif %}
+          {%- if event.rsvp and event.cfp %} / {% endif %}
+          {%- if event.cfp %}<a href="{{ event.cfp }}">CFP<span class="wtdi-visually-hidden"> for {{ event.title }}</span></a>{% endif %}
+        </p>
         {%- endif %}
       </li>
       {%- endfor %}
@@ -130,7 +136,7 @@ layout: default
       <li>
         <time class="wtdi-meta" datetime="{{ event.date }}">{{ event.date }}</time>
         <div>
-          <strong>{% if event.blog %}<a href="{{ event.blog | relative_url }}">{{ event.title }}</a>{% else %}{{ event.title }}{% endif %}</strong>{% if event.host %}, {% if event.host_url %}<a href="{{ event.host_url }}">{{ event.host }}</a>{% else %}{{ event.host }}{% endif %}{% endif %}.
+          <strong>{% if event.blog %}<a href="{{ event.blog | relative_url }}">{{ event.title }}</a>{% else %}{{ event.title }}{% endif %}</strong>{% if event.host %}, {% if event.host_url %}<a href="{{ event.host_url }}">{{ event.host }}</a>{% else %}{{ event.host }}{% endif %}{% endif %}{% if event.partner %}, co-organised with {% if event.partner_url %}<a href="{{ event.partner_url }}">{{ event.partner }}</a>{% else %}{{ event.partner }}{% endif %}{% endif %}.
           {%- if event.summary %} {{ event.summary }}{% endif %}
           {%- if event.recording %}<br><a href="{{ event.recording }}">Watch the recording</a>{% endif %}
         </div>
